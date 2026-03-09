@@ -4,8 +4,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="icon" href="assets/icons/world-wide-web_1927746.png">
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -17,14 +21,202 @@
       }
 
       body {
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .both {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+      }
+
+      header h1 {
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      nav {
+        display: flex;
+      }
+
+      .display {
+        flex-grow: 1;
+        background-image: url('https://www.w3schools.com/w3images/mac.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        filter: grayscale(50%);
+        color: white;
+        display: flex;
+        align-items: center;
+        padding-left: 25px;
+      }
+
+      .dis-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+      }
+
+      .dis-info h1 {
+        font-size: 3rem;
+      }
+
+      .dis-info button {
+        border: none;
+        padding: 20px;
+        opacity: 0.7;
+        cursor: pointer;
+      }
+
+      .dis-info button:hover {
+        opacity: 1;
+      }
+
+      .about {
+        padding: 70px 20px;
+      }
+
+      .about-label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .feature {
+        text-align: center;
+        margin: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .feature .icon {
+        font-size: 5rem;
+      }
+
+      .feature h1 {
+        font-size: 1.2rem;
+        font-weight: 200;
+      }
+
+      .design {
+        padding: 130px 20px;
+        background-color: #F1F1F1;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+      }
+
+      .design img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .design-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+      }
+
+      .design-info button {
+        border: none;
+        background-color: black;
+        color: white;
         padding: 10px;
       }
 
-      .box {
-        max-width: 200px;
-        height: 200px;
-        background-color: red;
-        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+      .design-info button:hover {
+        background-color: rgb(208, 201, 201);
+        color: black;
+      }
+
+      .teams {
+        padding: 130px 0;
+      }
+
+      .team-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .team-info h1 {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .team-members {
+        display: grid;
+        padding: 0 20px;
+        margin-top: 50px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .member-header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .member-header h1 {
+        font-weight: 400;
+        font-size: 1.3rem;
+      }
+
+      .member {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .member-content {
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+      }
+
+      .member-content P {
+        color: gray;
+      }
+
+      .member-content button {
+        border: none;
+        background-color: rgb(236, 230, 230);
+        padding: 10px;
+      }
+
+      .member-content button:hover {
+        background-color: rgb(194, 191, 191);
+
       }
     </style>
 
@@ -32,12 +224,195 @@
 
   <body>
 
+    <div class="both">
 
-    <div class="box">
+      <header>
+        <h1>LOGO</h1>
+
+        <nav>
+          <a href="#about">ABOUT</a>
+
+          <div>
+            <i class="fa-solid fa-dollar-sign"></i>
+            <a href="">TEAM</a>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-dollar-sign"></i>
+            <a href="">WORK</a>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-dollar-sign"></i>
+            <a href="">PRICING</a>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-dollar-sign"></i>
+            <a href="">CONTACT</a>
+          </div>
+
+
+
+
+
+
+        </nav>
+
+      </header>
+
+
+      <section class="display">
+
+        <div class="dis-info">
+          <h1>Start something that matters</h1>
+          <p>Stop wasting valuable time with projects that just isn't you.</p>
+          <button>Learn more and start today</button>
+        </div>
+
+      </section>
 
 
     </div>
 
+    <section class="about" id="about">
+
+      <div class="about-label">
+        <h1>ABOUT THE COMPANY</h1>
+        <p>Key features of our company</p>
+      </div>
+
+      <div class="features">
+
+        <div class="feature">
+
+          <i class="fa-solid fa-laptop icon"></i>
+          <h1>Responsive</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore.</p>
+
+        </div>
+        <div class="feature">
+
+          <i class="fa-solid fa-heart icon"></i>
+          <h1>Passion</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore.</p>
+
+        </div>
+        <div class="feature">
+
+          <i class="fa-regular fa-diamond icon"></i>
+          <h1>Design</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore.</p>
+
+        </div>
+        <div class="feature">
+
+          <i class="fa-solid fa-gear icon"></i>
+          <h1>Support</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore.</p>
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+    </section>
+
+
+    <section class="design">
+
+      <div class="design-info">
+        <h3>We know design</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore.</p>
+        <button>
+          <i class="fa-solid fa-grip"></i>
+          View Our Works
+        </button>
+      </div>
+
+      <div class="design-img">
+        <img src="https://www.w3schools.com/w3images/phone_buildings.jpg" alt="">
+      </div>
+
+    </section>
+
+
+    <section class="teams">
+
+      <div class="team-info">
+        <h1>THE TEAM</h1>
+        <p>The ones who runs this company</p>
+      </div>
+
+      <div class="team-members">
+
+        <div class="member">
+          <div class="member-header">
+            <img src="https://www.w3schools.com/w3images/team2.jpg" alt="">
+            <h1>John Doe</h1>
+          </div>
+          <div class="member-content">
+            <p>CEO & Founder</p>
+            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            <button>Contact</button>
+          </div>
+
+        </div>
+
+
+        <div class="member">
+          <div class="member-header">
+            <img src="https://www.w3schools.com/w3images/team1.jpg" alt="">
+            <h1>Anja Doe</h1>
+          </div>
+          <div class="member-content">
+            <p>Art Director</p>
+            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            <button>Contact</button>
+          </div>
+
+        </div>
+
+
+
+        <div class="member">
+          <div class="member-header">
+            <img src="https://www.w3schools.com/w3images/team3.jpg" alt="">
+            <h1>Mike Ross</h1>
+          </div>
+          <div class="member-content">
+            <p>Web Designer</p>
+            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            <button>Contact</button>
+          </div>
+
+        </div>
+
+
+
+        <div class="member">
+          <div class="member-header">
+            <img src="https://www.w3schools.com/w3images/team4.jpg" alt="">
+            <h1>Dan Star</h1>
+          </div>
+          <div class="member-content">
+            <p>Designer</p>
+            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            <button>Contact</button>
+          </div>
+
+        </div>
 
 
 
@@ -45,6 +420,10 @@
 
 
 
+
+      </div>
+
+    </section>
 
 
 
