@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router"
 import { RouterProvider } from "react-router-dom";
 import Home from "./pages/home/Home.jsx";
 import About from "./pages/about/About.jsx";
-import Page1 from "./pages/home/child-pages/Page1.jsx";
-import Page2 from "./pages/home/child-pages/Page2.jsx";
+
+import RootLayout from "./components/RootLayout.jsx";
 
 export default function App() {
 
@@ -11,22 +11,23 @@ export default function App() {
 
     {
       path: "/",
-      element: <Home />,
+      element: <RootLayout />,
       children: [
+
         {
-          path: "page1",
-          element: <Page1 />
+          index: true,
+          element: <Home />
+
         },
+
         {
-          path: "page2",
-          element: <Page2 />
+          path: "about",
+          element: <About />
         }
+
       ]
     },
-    {
-      path: "about",
-      element: <About />
-    }
+
 
 
 
