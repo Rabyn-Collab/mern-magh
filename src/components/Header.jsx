@@ -1,20 +1,19 @@
-import { NavLink } from "react-router";
 
 export default function Header() {
   return (
-    <div>
+    <div className="flex items-center px-5 justify-between py-2">
 
-      <h1 className="text-2xl font-bold">React</h1>
-      <nav className="flex gap-5">
+      <div>
+        <i className="fa-solid fa-bars"></i>
+      </div>
 
-        <NavLink
-          className={(e) => e.isActive ? "text-red-500" : "text-black"}
-          to="/">Home</NavLink>
-        <NavLink
-          className={(e) => e.isActive ? "text-red-500" : "text-black"}
-          to="/about">About</NavLink>
 
-      </nav>
+      <h1 className="font-light">My Food</h1>
+
+      <h1 className="font-light">Mail</h1>
+
+
+
 
     </div>
   )

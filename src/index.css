@@ -1,1 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
+
+
+
+@theme {
+
+  /* --color-*: initial;
+  --color-white: #fff;
+  --color-purple: #3f3cbb;
+  --color-midnight: #121063;
+  --color-tahiti: #3ab7bf;
+  --color-bermuda: #78dcca; */
+
+  --color-newColor: #73A5CA;
+  --color-red-900: blue;
+
+  --text-big: 4rem;
+
+  --animate-some: some 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+
+  @keyframes some {
+    20% {
+      color: red;
+    }
+
+    50% {
+      color: green;
+    }
+
+    100% {
+      color: blue;
+    }
+
+  }
+
+}
+
+@layer base {
+  body {
+    font-family: "Karma", serif;
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl font-bold;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .card {
+    @apply shadow-2xl max-w-xl p-5 bg-gray-100 rounded-2xl my-3;
+  }
+}

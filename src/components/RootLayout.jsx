@@ -6,7 +6,13 @@ export default function RootLayout() {
     <div>
 
       <Header />
-      <Outlet />
+
+      <main className="max-w-337.5 mx-auto my-10">
+
+        <Outlet />
+
+      </main>
+
 
     </div>
   )
