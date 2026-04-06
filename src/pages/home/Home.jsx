@@ -1,10 +1,20 @@
-import FoodSection from "./FoodSection.jsx";
-
 export default function Home() {
+
+  let counter = 0;
+
+
+  const handleClick = () => {
+    counter += 1;
+  }
+
+
   return (
     <div>
 
-      <FoodSection />
+
+      <h1>{counter}</h1>
+
+
 
 
 
