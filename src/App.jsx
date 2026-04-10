@@ -4,6 +4,7 @@ import Home from "./pages/home/Home.jsx";
 import About from "./pages/about/About.jsx";
 
 import RootLayout from "./components/RootLayout.jsx";
+import MealItems from "./pages/meals/MealItems.jsx";
 
 export default function App() {
 
@@ -23,6 +24,11 @@ export default function App() {
         {
           path: "about",
           element: <About />
+        },
+
+        {
+          path: 'meal-items/:category',
+          element: <MealItems />
         }
 
       ]

@@ -41,7 +41,7 @@
 
 @layer base {
   body {
-    font-family: "Karma", serif;
+    /* font-family: "Karma", serif; */
     @apply bg-background text-foreground;
   }
 
@@ -60,10 +60,12 @@
   button {
     @apply cursor-pointer;
   }
+
   * {
     @apply border-border outline-ring/50;
 
   }
+
   html {
     @apply font-sans;
 
